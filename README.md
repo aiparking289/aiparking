@@ -1,4 +1,4 @@
-# Smart Parking System
+# Techno Slot Seeker
 
 An AI-powered real-time parking management system that uses **YOLOv8 object detection** to monitor parking lot occupancy through live camera feeds. Users can view available slots, book parking spaces, and receive email & SMS confirmations — all through a modern web dashboard.
 

@@ -375,7 +375,7 @@ def create_booking():
                     message = (
                         f"Hi {booking.user_name}, your booking for Slot {slot_label} is confirmed!\n\n"
                         f"Rules: Park within lines, lock your vehicle, and follow the 10km/h speed limit.\n\n"
-                        f"Thanks, The Smart Parking Team"
+                        f"Thanks, The Techno Slot Seeker Team"
                     )
                     
                     twilio_client.messages.create(
