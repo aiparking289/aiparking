@@ -16,7 +16,10 @@ app = Flask(__name__, template_folder='templates')
 app.config.from_object(config[env])
 
 # Enable CORS for frontend communication
-CORS(app, resources={r"/api/*": {"origins": app.config['CORS_ORIGINS']}})
+cors_origins = app.config['CORS_ORIGINS']
+if cors_origins == ['*']:
+    cors_origins = '*'
+CORS(app, resources={r"/api/*": {"origins": cors_origins}})
 
 # Initialize Database
 db = SQLAlchemy(app)

@@ -18,8 +18,8 @@ class Config:
     MAX_CONTENT_LENGTH = int(os.getenv('MAX_CONTENT_LENGTH', 500)) * 1024 * 1024
     ALLOWED_EXTENSIONS = {'mp4', 'avi', 'mov', 'mkv', 'flv', 'wmv'}
     
-    # CORS
-    CORS_ORIGINS = os.getenv('CORS_ORIGINS', 'http://localhost:5173').split(',')
+    # CORS - defaults to '*' (all origins) for easy local development
+    CORS_ORIGINS = os.getenv('CORS_ORIGINS', '*').split(',')
     
     # Video
     VIDEO_SOURCE = os.getenv('VIDEO_SOURCE', 'parking.mp4')

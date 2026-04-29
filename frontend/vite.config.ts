@@ -15,7 +15,6 @@ export default defineConfig(({ mode }) => ({
       "/api": {
         target: "http://localhost:5000",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""),
         onError: (err, req, res) => {
           // Suppress noise in terminal when backend is down
         }
