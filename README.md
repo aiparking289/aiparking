@@ -306,7 +306,7 @@ npm --version
 ### Step 1 — Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/aiparking289/aiparking.git
 cd asystem
 ```
 
