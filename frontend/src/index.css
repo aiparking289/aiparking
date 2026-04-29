@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 140 20% 98%;
+    --foreground: 200 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 25% 10%;
+
+    --primary: 152 60% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 145 30% 94%;
+    --secondary-foreground: 152 60% 30%;
+
+    --muted: 140 15% 95%;
+    --muted-foreground: 200 10% 45%;
+
+    --accent: 145 40% 90%;
+    --accent-foreground: 152 60% 25%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --available: 152 60% 42%;
+    --available-light: 145 50% 92%;
+    --occupied: 0 72% 55%;
+    --occupied-light: 0 60% 95%;
+    --booked: 40 90% 55%;
+    --booked-light: 40 80% 93%;
+
+    --border: 140 15% 90%;
+    --input: 140 15% 90%;
+    --ring: 152 60% 42%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 200 25% 6%;
+    --foreground: 140 10% 95%;
+    --card: 200 20% 10%;
+    --card-foreground: 140 10% 95%;
+    --popover: 200 20% 10%;
+    --popover-foreground: 140 10% 95%;
+    --primary: 152 60% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 200 20% 15%;
+    --secondary-foreground: 140 10% 90%;
+    --muted: 200 15% 15%;
+    --muted-foreground: 200 10% 55%;
+    --accent: 200 20% 15%;
+    --accent-foreground: 140 10% 90%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 200 15% 18%;
+    --input: 200 15% 18%;
+    --ring: 152 60% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .slot-card-available {
+    @apply bg-[hsl(var(--available-light))] border-[hsl(var(--available))]/30 hover:border-[hsl(var(--available))]/60 hover:shadow-lg hover:shadow-[hsl(var(--available))]/10;
+  }
+  .slot-card-occupied {
+    @apply bg-[hsl(var(--occupied-light))] border-[hsl(var(--occupied))]/30;
+  }
+  .slot-card-booked {
+    @apply bg-[hsl(var(--booked-light))] border-[hsl(var(--booked))]/30;
+  }
+}
+
+/* Mobile touch device optimizations */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .group:hover {
+    /* Disable hover transforms on touch devices */
+  }
+  
+  .animate-slide-up {
+    animation-duration: 0.3s;
+  }
+  
+  .animate-fade-in {
+    animation-duration: 0.4s;
+  }
+}
+
+/* Disable tap highlight on mobile */
+@media (hover: none) {
+  button, a, [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
