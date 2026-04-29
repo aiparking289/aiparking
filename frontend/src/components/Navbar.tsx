@@ -18,7 +18,7 @@ const Navbar = () => {
           <div className="flex h-8 sm:h-9 w-8 sm:w-9 items-center justify-center rounded-lg bg-primary">
             <Car className="h-4 sm:h-5 w-4 sm:w-5 text-primary-foreground" />
           </div>
-          <span className="hidden xs:inline">SmartPark</span>
+          <span className="hidden xs:inline">Techno Slot Seeker</span>
         </Link>
 
         <div className="flex items-center gap-0.5 sm:gap-1">

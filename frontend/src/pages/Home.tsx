@@ -16,8 +16,8 @@ const Home = () => (
       </div>
 
       <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-        Smart Parking
-        <span className="block text-primary">System</span>
+        Techno Slot
+        <span className="block text-primary">Seeker</span>
       </h1>
 
       <p className="mx-auto max-w-md text-base sm:text-lg text-muted-foreground">

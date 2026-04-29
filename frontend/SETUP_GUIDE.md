@@ -1,4 +1,4 @@
-# Smart Parking Dashboard - YOLO Integration
+# Techno Slot Seeker Dashboard - YOLO Integration
 
 This dashboard now uses real YOLO object detection instead of simulation to track parking slot availability.
 
